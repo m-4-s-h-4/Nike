@@ -6,9 +6,10 @@ import Product from './types/product.model';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  searchKey: string = "";
   products$: Observable<Product[]>;
   cartItems$: Observable<Product[]>;
   total$: Observable<number>;

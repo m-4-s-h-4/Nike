@@ -4,7 +4,8 @@
   <div class="product-catalog">
     <div class="product-grid">
 
-      <div *ngFor="let product of products$ | async" class="product-card">
+      <div *ngFor="let product of (products$ | async | filter:'kid':'title')" class="product-card">
+
         <img [src]="product.image">
         <button (click)="addItemsToCart(product)">Add to cart</button>
         <h2>{{ product.title }}</h2>
