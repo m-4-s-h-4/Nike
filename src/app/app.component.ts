@@ -23,7 +23,7 @@ export class AppComponent {
     this.storeService.addItemsToCart(product);
   }
 
-  removeItemFromCartByIndex(index: number): void {
-    this.storeService.removeItemFromCartByIndex(index);
+  removeItem(index: number): void {
+    this.storeService.removeItem(index);
   }
 }

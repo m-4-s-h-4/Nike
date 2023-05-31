@@ -1,16 +1,32 @@
-<h1>Catalogue</h1>
-<ul>
-  <li *ngFor="let product of products$ | async">
-    <button (click)="addItemsToCart(product)">Add to cart</button>
-    {{ product.title }} - {{ product.price | currency }}
-  </li>
-</ul>
-<h2>Cart Items</h2>
-<ul>
-  <li *ngFor="let item of cartItems$ | async; let i = index">
-    <button (click)="removeItemFromCartByIndex(i)">Remove from cart by index</button>
-    {{ item.title }} - {{ item.price | currency }}
-  </li>
-  <li *ngIf="(cartItems$ | async)?.length === 0">No items</li>
-</ul>
-<h2>Total: {{ total$ | async | currency }}</h2>
+<app-navbar></app-navbar>
+
+<div class="container">
+  <div class="product-catalog">
+    <div class="product-grid">
+
+      <div *ngFor="let product of products$ | async" class="product-card">
+        <img [src]="product.image">
+        <button (click)="addItemsToCart(product)">Add to cart</button>
+        <h2>{{ product.title }}</h2>
+        <h3>Price: {{ product.price | currency}}</h3>
+        <p class="description" [title]="product.description">{{ product.description }}</p>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="products-cart">
+    <table>
+      <tbody>
+        <tr *ngFor="let item of cartItems$ | async; let i = index">
+          <td><img [src]="item.image"></td>
+          <td>{{ item.title }}</td>
+          <td>{{ item.price | currency }}</td>
+          <td><button (click)="removeItem(i)">Remove</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Total: {{ total$ | async | currency }}</h2>
+  </div>
+</div>

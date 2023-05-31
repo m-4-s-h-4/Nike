@@ -1,0 +1,48 @@
+.navbar {
+    padding: 0 20px;
+    height: 70px;
+    border-bottom: 1px solid #ccc;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.logo {
+    height: 50px;
+    margin-left: 2rem;
+}
+
+.items {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.item {
+    margin: 0 10px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+}
+
+input[type="text"] {
+    padding: 5px;
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 30px;
+}
+
+.arrow-button {
+    background-color: #ccc;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 30px;
+    margin-left: 5px;
+}

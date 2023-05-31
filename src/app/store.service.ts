@@ -25,7 +25,7 @@ export class StoreService {
     this.cartItemsSubject.next(newItems);
   }
 
-  removeItemFromCartByIndex(index: number) {
+  removeItem(index: number) {
     const currentItems = this.cartItemsSubject.getValue();
     const newItems = currentItems.filter((item, i) => i !== index);
     this.cartItemsSubject.next(newItems);
