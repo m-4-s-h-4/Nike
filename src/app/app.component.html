@@ -1,26 +1,27 @@
 <app-navbar></app-navbar>
+
+
 <link rel="stylesheet"
   href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0" />
+
+
 <div class="container">
+
+  <!-- products showroom -->
+
   <div class="product-catalog">
     <div class="product-grid">
-
       <div *ngFor="let product of (products$ | async | filter:searchKey:'title')" class="product-card">
-
         <img [src]="product.image">
         <button (click)="addItemsToCart(product)">Add to cart</button>
-        <!-- <h2 [class.matched]="searchKey.length > 2 && product.title.toLowerCase().includes(searchKey.toLowerCase())">
-          {{ product.title }}
-        </h2> -->
-
-        <h2>{{ product.title }}</h2>
-        <h3>Price: {{ product.price | currency}}</h3>
+        <h2 [innerHTML]="highlightTitle(product.title)"></h2>
+        <h3>Price: {{ product.price | currency }}</h3>
         <p class="description" [title]="product.description">{{ product.description }}</p>
       </div>
-
     </div>
   </div>
 
+  <!-- cart -->
 
   <div class="products-cart">
     <table>
@@ -36,6 +37,8 @@
     <h2>Total: {{ total$ | async | currency }}</h2>
   </div>
 </div>
+
+<!-- pagination -->
 
 <div class="pagination">
   <button (click)="prevPage()">

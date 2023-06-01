@@ -21,6 +21,13 @@ export class AppComponent {
     this.total$ = this.storeService.total$;
   }
 
+  highlightTitle(title: string): string {
+    if (this.searchKey && title) {
+      return title.replace(new RegExp(this.searchKey, 'gi'), '<span class="match">$&</span>');
+    }
+    return title;
+  }
+
   ngOnInit(): void {
     this.storeService.search.subscribe((val: any) => {
       this.searchKey = val;
