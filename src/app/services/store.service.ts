@@ -21,9 +21,20 @@ export class StoreService {
         if (selectedCategory) {
           filteredProducts = products.filter(product => product.category === selectedCategory);
         }
+
+
         const itemsPerPage = 4;
+        const totalItems = filteredProducts.length;
+        const totalPages = Math.ceil(totalItems / itemsPerPage);
+
+        if (currentPage > totalPages) {
+          currentPage = totalPages;
+          this.currentPage.next(currentPage);
+        }
+
         const start = (currentPage - 1) * itemsPerPage;
         const end = start + itemsPerPage;
+
         return filteredProducts.slice(start, end);
       })
     );
