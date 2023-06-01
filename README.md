@@ -1,7 +1,7 @@
 # (Not) Nike Angular Store
 Shoes store website that lets customers explore my wide range of NotNike Shoes and add them to cart. The app was created using the Angular framework and offers features like product display, item addition to the cart, total calculation, item removal from the basket, search bar with highlighting, item sorting by category, and pagination.  The app was created using the Angular framework and offers functionality  such as product display, product addition to the cart, total calculation, item removal from the cart, search bar with highlighting, item sorting by category, and pagination.
  
-1.Clone the repository to your local machine using 
+1. Clone the repository to your local machine using 
 ```git clone <repository-url>```
 
 2. Go to the project's directory using ```cd Nike```
@@ -10,7 +10,7 @@ Shoes store website that lets customers explore my wide range of NotNike Shoes a
 
 4. Start server with ```ng serve -o```
 
-## Show Showroom
+## notNike Shoes Showroom
 
 The program shows a paginated list of products along with information about each one, such as name, cost, and description on hoover.
 
