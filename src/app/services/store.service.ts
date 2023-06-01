@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { ajax } from 'rxjs/ajax';
 import { BehaviorSubject, combineLatest, map } from 'rxjs';
-import Product from './types/product.model';
+import Product from '../types/product.model';
+
 
 @Injectable({
   providedIn: 'root'
