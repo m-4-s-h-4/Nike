@@ -9,7 +9,7 @@
             <div class="item">unisex shoes</div>
         </div>
         <div class="input-container">
-            <input type="text" placeholder="Just don't do it.">
+            <input type="text" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="Just don't do it.">
             <button class="arrow-button">Go</button>
         </div>
     </div>

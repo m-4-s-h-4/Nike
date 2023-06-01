@@ -7,6 +7,7 @@ import { BehaviorSubject, combineLatest, map } from 'rxjs';
   providedIn: 'root'
 })
 export class StoreService {
+  public search = new BehaviorSubject<string>("");
   private cartItemsSubject = new BehaviorSubject<Product[]>([]);
   cartItems$ = this.cartItemsSubject.asObservable();
 

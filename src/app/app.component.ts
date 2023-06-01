@@ -14,6 +14,13 @@ export class AppComponent {
   cartItems$: Observable<Product[]>;
   total$: Observable<number>;
 
+  ngOnInit(): void {
+    this.storeService.search.subscribe((val: any) => {
+      this.searchKey = val;
+    });
+  }
+
+
   constructor(private storeService: StoreService) {
     this.products$ = this.storeService.products$;
     this.cartItems$ = this.storeService.cartItems$;
