@@ -9,6 +9,7 @@ import Product from './types/product.model';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  title = 'Nike';
   searchKey: string = "";
   products$: Observable<Product[]>;
   cartItems$: Observable<Product[]>;
@@ -22,10 +23,11 @@ export class AppComponent {
 
 
   constructor(private storeService: StoreService) {
-    this.products$ = this.storeService.products$;
+    this.products$ = this.storeService.filteredProducts$;
     this.cartItems$ = this.storeService.cartItems$;
     this.total$ = this.storeService.total$;
   }
+
 
   addItemsToCart(product: Product): void {
     this.storeService.addItemsToCart(product);

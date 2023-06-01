@@ -1,16 +1,19 @@
 <nav class="navbar">
     <div class="nav-container">
         <img src="https://cdn.inspireuplift.com/uploads/images/seller_products/1680593478_42.png" alt="Logo"
-            class="logo">
+            class="logo" (click)="resetCategory()">
         <div class="items">
-            <div class="item">men's shoes</div>
-            <div class="item">women's shoes</div>
-            <div class="item">kids' shoes</div>
-            <div class="item">unisex shoes</div>
+            <div class="item" [class.selected]="itemCategory() === 'men\'s shoes'"
+                (click)="changeCategory('men\'s shoes')">men's shoes</div>
+            <div class="item" [class.selected]="itemCategory() === 'women\'s shoes'"
+                (click)="changeCategory('women\'s shoes')">women's shoes</div>
+            <div class="item" [class.selected]="itemCategory() === 'kids\' shoes'"
+                (click)="changeCategory('kids\' shoes')">kids' shoes</div>
+            <div class="item" [class.selected]="itemCategory() === 'unisex shoes'"
+                (click)="changeCategory('unisex shoes')">unisex shoes</div>
         </div>
         <div class="input-container">
-            <input type="text" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="Just don't do it.">
-            <button class="arrow-button">Go</button>
+            <input type="text" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="Just don't do it.   ->">
         </div>
     </div>
 </nav>

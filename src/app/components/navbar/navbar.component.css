@@ -17,13 +17,14 @@
 }
 
 .items {
+    font-family: 'Inter', sans-serif;
     display: flex;
     justify-content: center;
     flex-grow: 1;
 }
 
 .item {
-    margin: 0 10px;
+    margin: 0 20px;
 }
 
 .input-container {
@@ -32,17 +33,15 @@
 }
 
 input[type="text"] {
-    padding: 5px;
-    width: 200px;
-    border: 1px solid black;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    padding: 10px;
+    width: 250px;
+    border: 1.5px solid black;
     border-radius: 30px;
 }
 
-.arrow-button {
-    background-color: #ccc;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 30px;
-    margin-left: 5px;
+.selected {
+    border-bottom: 2.5px solid #000000;
+    font-weight: bolder;
 }

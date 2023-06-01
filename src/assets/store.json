@@ -5,7 +5,7 @@
         "price": 109.95,
         "description": "Experience responsive cushioning and lightweight support during your runs.",
         "category": "men's shoes",
-        "image": "https://static.nike.com/a/images/t_default/92511553-5c5c-4da6-96da-96a51dc701ed/air-force-1-07-mid-womens-shoes-2NP34w.png",
+        "image": "https://i.imgur.com/AtPLHzx.png",
         "rating": {
             "rate": 3.9,
             "count": 120
@@ -17,7 +17,7 @@
         "price": 22.3,
         "description": "Get exceptional cushioning and bold style with these trendy sneakers.",
         "category": "men's shoes",
-        "image": "https://www.pngall.com/wp-content/uploads/13/Nike-Shoes-PNG-File.png",
+        "image": "https://www.nike.ae/dw/image/v2/BDVB_PRD/on/demandware.static/-/Sites-akeneo-master-catalog/default/dw5c37d946/nk/48a/c/3/6/8/f/48ac368f_0d69_4b57_ad8d_4ebaa8e2eb74.png?sw=520&sh=520&sm=fit",
         "rating": {
             "rate": 4.1,
             "count": 259
@@ -29,7 +29,7 @@
         "price": 55.99,
         "description": "Experience the ultimate lightweight and flexible running shoes.",
         "category": "women's shoes",
-        "image": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1679571918-110390-426-m-hyperion-max-mens-fastest-running-shoe.png?crop=1xw:1xh;center,top&resize=980:*",
+        "image": "https://i.imgur.com/m0w5WXx.png",
         "rating": {
             "rate": 4.7,
             "count": 500
@@ -41,7 +41,7 @@
         "price": 15.99,
         "description": "Channel your inner athlete with these iconic basketball shoes.",
         "category": "men's shoes",
-        "image": "https://www.nike.ae/dw/image/v2/BDVB_PRD/on/demandware.static/-/Sites-akeneo-master-catalog/default/dw5c37d946/nk/48a/c/3/6/8/f/48ac368f_0d69_4b57_ad8d_4ebaa8e2eb74.png?sw=520&sh=520&sm=fit",
+        "image": "https://i.imgur.com/OEHYFTb.png",
         "rating": {
             "rate": 2.1,
             "count": 430
@@ -49,7 +49,7 @@
     },
     {
         "id": 5,
-        "title": "Black Nike Men's Air Max 270 React Sneakers",
+        "title": "Black Nike Men's Air 290  ",
         "price": 695,
         "description": "Get exceptional cushioning and bold style with these trendy sneakers.",
         "category": "men's shoes",
@@ -125,7 +125,7 @@
         "price": 120,
         "description": "Experience maximum comfort and style with Nike Men's Air Max 90 Running Shoes.",
         "category": "men's shoes",
-        "image": "https://i.imgur.com/AtPLHzx.png",
+        "image": "https://static.nike.com/a/images/t_default/92511553-5c5c-4da6-96da-96a51dc701ed/air-force-1-07-mid-womens-shoes-2NP34w.png",
         "rating": {
             "rate": 4.6,
             "count": 80
@@ -157,10 +157,10 @@
     },
     {
         "id": 14,
-        "title": "Nike Men's Clyde Court Basketball Shoes",
+        "title": "Nike Clyde Court Basketball Shoes",
         "price": 110,
         "description": "Get ready to dominate the court with Nike Men's Clyde Court Basketball Shoes.",
-        "category": "men's shoes",
+        "category": "unisex shoes",
         "image": "https://i.imgur.com/LpyJnxb.png",
         "rating": {
             "rate": 4.5,
@@ -209,7 +209,7 @@
         "price": 150,
         "description": "Experience exceptional comfort and style with Nike Air Max 270 shoes.",
         "category": "men's shoes",
-        "image": "https://i.imgur.com/m0w5WXx.png",
+        "image": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1679571918-110390-426-m-hyperion-max-mens-fastest-running-shoe.png?crop=1xw:1xh;center,top&resize=980:*",
         "rating": {
             "rate": 4.9,
             "count": 300
@@ -217,11 +217,11 @@
     },
     {
         "id": 19,
-        "title": "Nike Women's Classic Leather Sneakers",
+        "title": "Nike Classic Leather Sneakers",
         "price": 70,
         "description": "Step up your footwear game with these classic leather sneakers from Nike.",
-        "category": "women's shoes",
-        "image": "https://i.imgur.com/OEHYFTb.png",
+        "category": "unisex shoes",
+        "image": "https://www.pngall.com/wp-content/uploads/13/Nike-Shoes-PNG-File.png",
         "rating": {
             "rate": 4.3,
             "count": 90

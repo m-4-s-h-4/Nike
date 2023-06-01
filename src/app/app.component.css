@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap');
+
 /* responsive cart and catalog */
 
 .container {
@@ -52,6 +54,10 @@
     box-sizing: border-box;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     border-radius: 30px;
+}
+
+h2 {
+    font-family: 'Dosis', sans-serif;
 }
 
 .product-card:hover {
