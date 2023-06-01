@@ -1,14 +1,12 @@
 import { Component } from '@angular/core';
 import { StoreService } from 'src/app/services/store.service';
 
-
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-
   public searchTerm: string = '';
 
   constructor(private storeService: StoreService) { }
