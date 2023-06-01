@@ -15,19 +15,25 @@ export class AppComponent {
   cartItems$: Observable<Product[]>;
   total$: Observable<number>;
 
-  ngOnInit(): void {
-    this.storeService.search.subscribe((val: any) => {
-      this.searchKey = val;
-    });
-  }
-
-
   constructor(private storeService: StoreService) {
     this.products$ = this.storeService.filteredProducts$;
     this.cartItems$ = this.storeService.cartItems$;
     this.total$ = this.storeService.total$;
   }
 
+  ngOnInit(): void {
+    this.storeService.search.subscribe((val: any) => {
+      this.searchKey = val;
+    });
+  }
+
+  nextPage(): void {
+    this.storeService.nextPage();
+  }
+
+  prevPage(): void {
+    this.storeService.prevPage();
+  }
 
   addItemsToCart(product: Product): void {
     this.storeService.addItemsToCart(product);

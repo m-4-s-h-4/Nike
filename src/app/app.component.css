@@ -13,10 +13,9 @@
 
 .products-cart {
     flex: 1;
-    margin-left: 5rem;
     position: sticky;
     top: 3rem;
-    height: 87vh;
+    height: 80vh;
     overflow-y: scroll;
 }
 
@@ -50,7 +49,7 @@
 .product-card {
     position: relative;
     width: 100%;
-    padding: 30px;
+    padding: 20px;
     box-sizing: border-box;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     border-radius: 30px;
@@ -66,8 +65,8 @@ h2 {
 }
 
 .product-card img {
-    width: 20rem;
-    height: 20rem;
+    width: 15rem;
+    height: 15rem;
     object-fit: contain;
 }
 
@@ -154,6 +153,19 @@ h2 {
     background-color: #d03b00;
 }
 
-/* .matched {
-    background-color: yellow;
-} */
+.pagination {
+    margin-left: 22rem;
+}
+
+.pagination button {
+    background-color: #ff4800;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    padding: 10px 12px;
+    margin: 0 10px;
+}
+
+.highlight {
+    background-color: #d03b00;
+}

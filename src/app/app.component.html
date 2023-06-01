@@ -1,5 +1,6 @@
 <app-navbar></app-navbar>
-
+<link rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0" />
 <div class="container">
   <div class="product-catalog">
     <div class="product-grid">
@@ -34,4 +35,15 @@
     </table>
     <h2>Total: {{ total$ | async | currency }}</h2>
   </div>
+</div>
+
+<div class="pagination">
+  <button (click)="prevPage()">
+    <span class="material-symbols-outlined">
+      arrow_back_ios
+    </span>
+  </button>
+  <button (click)="nextPage()"><span class="material-symbols-outlined">
+      arrow_forward_ios
+    </span></button>
 </div>

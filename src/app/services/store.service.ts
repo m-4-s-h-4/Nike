@@ -3,7 +3,6 @@ import { ajax } from 'rxjs/ajax';
 import { BehaviorSubject, combineLatest, map } from 'rxjs';
 import Product from '../types/product.model';
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -11,14 +10,21 @@ export class StoreService {
   public search = new BehaviorSubject<string>("");
   public selectedCategory = new BehaviorSubject<string>("");
   private cartItemsSubject = new BehaviorSubject<Product[]>([]);
+  private currentPage = new BehaviorSubject<number>(1);
   cartItems$ = this.cartItemsSubject.asObservable();
   products$ = ajax.getJSON<Product[]>('/assets/store.json');
 
-  filteredProducts$ = combineLatest([this.products$, this.selectedCategory])
+  filteredProducts$ = combineLatest([this.products$, this.selectedCategory, this.currentPage])
     .pipe(
-      map(([products, selectedCategory]) => {
-        if (!selectedCategory) return products;
-        return products.filter(product => product.category === selectedCategory);
+      map(([products, selectedCategory, currentPage]) => {
+        let filteredProducts = products;
+        if (selectedCategory) {
+          filteredProducts = products.filter(product => product.category === selectedCategory);
+        }
+        const itemsPerPage = 4;
+        const start = (currentPage - 1) * itemsPerPage;
+        const end = start + itemsPerPage;
+        return filteredProducts.slice(start, end);
       })
     );
 
@@ -42,6 +48,16 @@ export class StoreService {
     const currentItems = this.cartItemsSubject.getValue();
     const newItems = currentItems.filter((item, i) => i !== index);
     this.cartItemsSubject.next(newItems);
+  }
+
+  nextPage(): void {
+    this.currentPage.next(this.currentPage.value + 1);
+  }
+
+  prevPage(): void {
+    if (this.currentPage.value > 1) {
+      this.currentPage.next(this.currentPage.value - 1);
+    }
   }
 
   constructor() { }
