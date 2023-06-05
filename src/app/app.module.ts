@@ -10,6 +10,9 @@ import { ItemsComponent } from './components/items/items.component';
 import { CartComponent } from './components/cart/cart.component';
 import { SuccessMessageComponent } from './components/success-message/success-message.component';
 import { CheckoutFormComponent } from './components/checkout-form/checkout-form.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { HomeComponent } from './components/home/home.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
 
 
 @NgModule({
@@ -20,7 +23,10 @@ import { CheckoutFormComponent } from './components/checkout-form/checkout-form.
     ItemsComponent,
     CartComponent,
     SuccessMessageComponent,
-    CheckoutFormComponent
+    CheckoutFormComponent,
+    NotFoundComponent,
+    HomeComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,

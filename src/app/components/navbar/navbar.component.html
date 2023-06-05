@@ -1,8 +1,9 @@
 <nav class="navbar">
     <div class="nav-container">
         <img src="https://cdn.inspireuplift.com/uploads/images/seller_products/1680593478_42.png" alt="Logo"
-            class="logo" (click)="resetCategory()">
+            class="logo">
         <div class="items">
+            <div class="item" (click)="resetCategory()">all</div>
             <div class="item" [class.selected]="itemCategory() === 'men\'s shoes'"
                 (click)="changeCategory('men\'s shoes')">men's shoes</div>
             <div class="item" [class.selected]="itemCategory() === 'women\'s shoes'"

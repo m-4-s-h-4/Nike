@@ -1,7 +1,7 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap');
 
 /* responsive cart and catalog */
-/* 
+
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -27,4 +27,4 @@
     .products-cart {
         margin-left: 2rem;
     }
-} */
+}
