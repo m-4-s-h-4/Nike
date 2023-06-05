@@ -5,7 +5,7 @@
 <div class="product-grid">
     <div *ngFor="let product of (products$ | async )" class="product-card">
         <img [src]="product.image">
-        <div [innerHTML]="highlightTitle(product.title)"></div>
+        <div class="title" [innerHTML]="highlightTitle(product.title)"></div>
         <button (click)="addItemsToCart(product)">Add to cart</button>
 
         <h3>Price: {{ product.price | currency }}</h3>

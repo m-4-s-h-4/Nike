@@ -11,7 +11,7 @@
     flex: 1;
 }
 
-.products-cart {
+.product-cart {
     flex: 1;
     position: sticky;
     top: 3rem;

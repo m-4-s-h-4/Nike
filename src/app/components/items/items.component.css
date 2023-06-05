@@ -4,6 +4,13 @@
 .product-card p {
     margin: 0;
     width: 90%;
+    font-size: 15px;
+}
+
+.title,
+h3 {
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.2rem;
 }
 
 .product-grid {
@@ -24,9 +31,6 @@
     border-radius: 30px;
 }
 
-h2 {
-    font-family: 'Dosis', sans-serif;
-}
 
 .product-card:hover {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;

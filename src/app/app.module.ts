@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FilterPipe } from './pipe/filter.pipe';
-import { TermsModule } from './terms/terms.module';
 import { RouterModule } from '@angular/router';
 import { ItemsComponent } from './components/items/items.component';
 import { CartComponent } from './components/cart/cart.component';
+import { SuccessMessageComponent } from './components/success-message/success-message.component';
+import { CheckoutFormComponent } from './components/checkout-form/checkout-form.component';
 
 
 @NgModule({
@@ -18,14 +18,16 @@ import { CartComponent } from './components/cart/cart.component';
     NavbarComponent,
     FilterPipe,
     ItemsComponent,
-    CartComponent
+    CartComponent,
+    SuccessMessageComponent,
+    CheckoutFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    TermsModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
