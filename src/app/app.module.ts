@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
 import { FilterPipe } from './pipe/filter.pipe';
+import { TermsModule } from './terms/terms.module';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { FilterPipe } from './pipe/filter.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    TermsModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
