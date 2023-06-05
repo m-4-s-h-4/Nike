@@ -1,56 +1,5 @@
 <app-navbar></app-navbar>
-
-
-<!-- routing -->
-
-<p><a routerLink="/terms">Terms of use</a></p>
-<router-outlet></router-outlet>
-<link rel="stylesheet"
-  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0" />
-
-
 <div class="container">
-
-  <!-- products showroom -->
-
-  <div class="product-catalog">
-    <div class="product-grid">
-      <div *ngFor="let product of (products$ | async | filter:searchKey:'title')" class="product-card">
-        <img [src]="product.image">
-        <button (click)="addItemsToCart(product)">Add to cart</button>
-        <h2 [innerHTML]="highlightTitle(product.title)"></h2>
-        <h3>Price: {{ product.price | currency }}</h3>
-        <p class="description" [title]="product.description">{{ product.description }}</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- cart -->
-
-  <div class="products-cart">
-    <table>
-      <tbody>
-        <tr *ngFor="let item of cartItems$ | async; let i = index">
-          <td><img [src]="item.image"></td>
-          <td>{{ item.title }}</td>
-          <td>{{ item.price | currency }}</td>
-          <td><button (click)="removeItem(i)">Remove</button></td>
-        </tr>
-      </tbody>
-    </table>
-    <h2>Total: {{ total$ | async | currency }}</h2>
-  </div>
-</div>
-
-<!-- pagination -->
-
-<div class="pagination">
-  <button (click)="prevPage()">
-    <span class="material-symbols-outlined">
-      arrow_back_ios
-    </span>
-  </button>
-  <button (click)="nextPage()"><span class="material-symbols-outlined">
-      arrow_forward_ios
-    </span></button>
+  <app-items class="product-catalog"></app-items>
+  <app-cart class="product-cart"></app-cart>
 </div>

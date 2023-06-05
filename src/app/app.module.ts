@@ -8,13 +8,17 @@ import { FormsModule } from '@angular/forms';
 import { FilterPipe } from './pipe/filter.pipe';
 import { TermsModule } from './terms/terms.module';
 import { RouterModule } from '@angular/router';
+import { ItemsComponent } from './components/items/items.component';
+import { CartComponent } from './components/cart/cart.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    FilterPipe
+    FilterPipe,
+    ItemsComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,27 @@
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0" />
+
+
+<div class="product-grid">
+    <div *ngFor="let product of (products$ | async )" class="product-card">
+        <img [src]="product.image">
+        <div [innerHTML]="highlightTitle(product.title)"></div>
+        <button (click)="addItemsToCart(product)">Add to cart</button>
+
+        <h3>Price: {{ product.price | currency }}</h3>
+        <p class="description" [title]="product.description">{{ product.description }}</p>
+    </div>
+</div>
+
+<!-- pagination -->
+
+<div class="pagination">
+    <button (click)="prevPage()">
+        <span class="material-symbols-outlined">
+            arrow_back_ios
+        </span>
+    </button>
+    <button (click)="nextPage()"><span class="material-symbols-outlined">
+            arrow_forward_ios
+        </span></button>
+</div>
