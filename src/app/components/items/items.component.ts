@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import Product from '../../types/product.model';
-import { StoreService } from '../../services/store.service';
+import { CartService } from 'src/app/services/cart/cart.service';
+import { StoreService } from 'src/app/services/store/store.service';
+
 
 @Component({
   selector: 'app-items',
@@ -12,7 +14,10 @@ export class ItemsComponent {
   products$: Observable<Product[]>;
   searchKey: string = "";
 
-  constructor(private storeService: StoreService) {
+  constructor(
+    private storeService: StoreService,
+    private cartService: CartService
+  ) {
     this.products$ = this.storeService.filteredProducts$;
 
     this.storeService.search.subscribe((val: any) => {
@@ -36,6 +41,6 @@ export class ItemsComponent {
   }
 
   addItemsToCart(product: Product): void {
-    this.storeService.addItemsToCart(product);
+    this.cartService.addItemsToCart(product);
   }
 }

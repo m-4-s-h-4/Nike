@@ -1,7 +1,7 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
+import { BehaviorSubject, combineLatest, map } from "rxjs";
+import Product from "../../types/product.model";
 import { ajax } from 'rxjs/ajax';
-import { BehaviorSubject, combineLatest, map } from 'rxjs';
-import Product from '../types/product.model';
 
 @Injectable({
   providedIn: 'root'
@@ -9,9 +9,8 @@ import Product from '../types/product.model';
 export class StoreService {
   public search = new BehaviorSubject<string>("");
   public selectedCategory = new BehaviorSubject<string>("");
-  private cartItemsSubject = new BehaviorSubject<Product[]>([]);
   private currentPage = new BehaviorSubject<number>(1);
-  cartItems$ = this.cartItemsSubject.asObservable();
+
   products$ = ajax.getJSON<Product[]>('/assets/store.json');
 
   filteredProducts$ = combineLatest([this.products$, this.selectedCategory, this.currentPage])
@@ -21,8 +20,6 @@ export class StoreService {
         if (selectedCategory) {
           filteredProducts = products.filter(product => product.category === selectedCategory);
         }
-
-
         const itemsPerPage = 4;
         const totalItems = filteredProducts.length;
         const totalPages = Math.ceil(totalItems / itemsPerPage);
@@ -39,26 +36,9 @@ export class StoreService {
       })
     );
 
-  total$ = this.cartItems$.pipe(
-    map((items: Product[]) => {
-      return items.reduce((acc, item) => acc + item.price, 0);
-    })
-  );
 
   changeCategory(category: string) {
     this.selectedCategory.next(category);
-  }
-
-  addItemsToCart(product: Product) {
-    const currentItems = this.cartItemsSubject.getValue();
-    const newItems = [...currentItems, product];
-    this.cartItemsSubject.next(newItems);
-  }
-
-  removeItem(index: number) {
-    const currentItems = this.cartItemsSubject.getValue();
-    const newItems = currentItems.filter((item, i) => i !== index);
-    this.cartItemsSubject.next(newItems);
   }
 
   nextPage(): void {

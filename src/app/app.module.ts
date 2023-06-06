@@ -26,7 +26,7 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
     CheckoutFormComponent,
     NotFoundComponent,
     HomeComponent,
-    CheckoutComponent
+    CheckoutComponent,
   ],
   imports: [
     BrowserModule,

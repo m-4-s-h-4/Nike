@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { StoreService } from 'src/app/services/store.service';
+import { StoreService } from 'src/app/services/store/store.service';
 
 @Component({
   selector: 'app-navbar',
