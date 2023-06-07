@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap');
+
+/* responsive cart and catalog */
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.checkout-form {
+    flex: 1;
+}
+
+.product-cart {
+    flex: 1;
+    position: sticky;
+    top: 3rem;
+    height: 92vh;
+    overflow-y: scroll;
+}
+
+@media (max-width: 1475px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .products-cart {
+        margin-left: 2rem;
+    }
+}

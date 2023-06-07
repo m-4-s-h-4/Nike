@@ -4,17 +4,10 @@
             class="logo">
         <div class="items">
             <div class="item" (click)="resetCategory()">all</div>
-            <div class="item" [class.selected]="itemCategory() === 'men\'s shoes'"
-                (click)="changeCategory('men\'s shoes')">men's shoes</div>
-            <div class="item" [class.selected]="itemCategory() === 'women\'s shoes'"
-                (click)="changeCategory('women\'s shoes')">women's shoes</div>
-            <div class="item" [class.selected]="itemCategory() === 'kids\' shoes'"
-                (click)="changeCategory('kids\' shoes')">kids' shoes</div>
-            <div class="item" [class.selected]="itemCategory() === 'unisex shoes'"
-                (click)="changeCategory('unisex shoes')">unisex shoes</div>
+            <div class="item" *ngFor="let category of categories$ | async"
+                [class.selected]="itemCategory() === category" (click)="changeCategory(category)">{{category}}</div>
         </div>
         <div class="input-container">
             <input type="text" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="Just don't do it.   ->">
         </div>
     </div>
-</nav>

@@ -10,4 +10,6 @@
         </tbody>
     </table>
     <h2>Total: {{ total$ | async | currency }}</h2>
+    <button class="btn-one" *ngIf="checkoutPage" routerLink="/">Continue shopping</button>
+    <button class="btn-two" *ngIf="!checkoutPage" routerLink="/checkout">Go to Checkout</button>
 </div>

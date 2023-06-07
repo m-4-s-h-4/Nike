@@ -8,13 +8,20 @@ import { FilterPipe } from './pipe/filter.pipe';
 import { RouterModule } from '@angular/router';
 import { ItemsComponent } from './components/items/items.component';
 import { CartComponent } from './components/cart/cart.component';
-import { SuccessMessageComponent } from './components/success-message/success-message.component';
+import { SuccessMessageComponent } from './components/routes/success-message/success-message.component';
 import { CheckoutFormComponent } from './components/checkout-form/checkout-form.component';
-import { NotFoundComponent } from './components/not-found/not-found.component';
-import { HomeComponent } from './components/home/home.component';
-import { CheckoutComponent } from './components/checkout/checkout.component';
+import { NotFoundComponent } from './components/routes/not-found/not-found.component';
+import { HomeComponent } from './components/routes/home/home.component';
+import { CheckoutComponent } from './components/routes/checkout/checkout.component';
 
+// Add these two
+import { LottieModule } from 'ngx-lottie';
+import player from 'lottie-web';
 
+// Export this function
+export function playerFactory(): any {
+  return import('lottie-web');
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +40,8 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
     AppRoutingModule,
     FormsModule,
     RouterModule,
-    ReactiveFormsModule
+    ReactiveFormsModule, // Add the module like so:    
+    LottieModule.forRoot({ player: playerFactory }),
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { StoreService } from 'src/app/services/store/store.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
@@ -8,8 +9,11 @@ import { StoreService } from 'src/app/services/store/store.service';
 })
 export class NavbarComponent {
   public searchTerm: string = '';
+  public categories$: Observable<string[]>;
 
-  constructor(private storeService: StoreService) { }
+  constructor(private storeService: StoreService) {
+    this.categories$ = this.storeService.categories$;
+  }
 
   changeCategory(category: string) {
     this.storeService.changeCategory(category);

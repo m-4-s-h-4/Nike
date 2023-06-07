@@ -3,8 +3,7 @@
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     border-radius: 30px;
     padding: 10px;
-    margin-top: 20px;
-    margin-right: 1rem;
+    margin: 1rem;
 }
 
 .products-cart h2 {
@@ -47,4 +46,33 @@
 
 .products-cart button:hover {
     background-color: #d03b00;
+}
+
+/* buttons */
+.products-cart .btn-one {
+    border: 1.5px solid black;
+    background-color: transparent;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.products-cart .btn-one:hover {
+    border: 1.5px solid black;
+    background-color: rgba(255, 106, 0, 0.606);
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.products-cart .btn-two {
+    border: 1.5px solid black;
+    background-color: transparent;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.products-cart .btn-two:hover {
+    border: 1.5px solid black;
+    background-color: rgba(145, 255, 111, 0.606);
+    color: #000000;
+    text-transform: uppercase;
 }

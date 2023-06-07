@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
-
 .error-message {
     color: #ff4800;
+    font-size: 12px;
 }
 
 .card h1 {
@@ -17,24 +16,22 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     display: block;
-    font-weight: bold;
-    font-size: x-large;
+
 }
 
 .card {
-    padding: 1rem;
-    margin-top: 0.5rem;
+    padding: 0.5rem;
+    margin-top: 1rem;
     margin-left: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    max-height: 870px;
-    width: 750px;
+    max-height: 900px;
+    width: 770px;
     flex-direction: column;
-    gap: 35px;
-    background: #e3e3e3;
-    box-shadow: 16px 16px 32px #c8c8c8,
-        -16px -16px 32px #fefefe;
+    gap: 30px;
+    background: #f2f2f2;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     border-radius: 30px;
 }
 
@@ -105,7 +102,7 @@
     border: 2px solid #000;
     color: #000;
     font-size: 1em;
-    background: #e3e3e3;
+    background: #f2f2f2;
     border-radius: 4px;
 }
 
