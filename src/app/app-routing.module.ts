@@ -4,6 +4,7 @@ import { NotFoundComponent } from './components/routes/not-found/not-found.compo
 import { CheckoutComponent } from './components/routes/checkout/checkout.component';
 import { HomeComponent } from './components/routes/home/home.component';
 import { SuccessMessageComponent } from './components/routes/success-message/success-message.component';
+import { TermsComponent } from './components/routes/terms/terms.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,10 @@ const routes: Routes = [
   {
     path: 'checkout',
     component: CheckoutComponent
+  },
+  {
+    path: 'terms',
+    component: TermsComponent
   },
   {
     path: 'success',

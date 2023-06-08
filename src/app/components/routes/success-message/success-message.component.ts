@@ -9,7 +9,6 @@ import { AnimationOptions } from 'ngx-lottie';
 })
 export class SuccessMessageComponent implements OnInit {
 
-  // This is the option that uses the package's AnimationOptions interface  
   options: AnimationOptions = {
     path: '/assets/lottie.json'
   };
@@ -18,7 +17,6 @@ export class SuccessMessageComponent implements OnInit {
 
   ngOnInit(): void { }
 
-  // This is the component function that binds to the animationCreated event from the package  
   onAnimate(animationItem: AnimationItem): void {
     console.log(animationItem);
   }

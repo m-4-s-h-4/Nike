@@ -50,6 +50,7 @@
 
 /* buttons */
 .products-cart .btn-one {
+    padding: 6px 15px;
     border: 1.5px solid black;
     background-color: transparent;
     color: #000000;
@@ -57,13 +58,13 @@
 }
 
 .products-cart .btn-one:hover {
-    border: 1.5px solid black;
     background-color: rgba(255, 106, 0, 0.606);
-    color: #000000;
-    text-transform: uppercase;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .products-cart .btn-two {
+    border-radius: 20px;
+    padding: 6px 15px;
     border: 1.5px solid black;
     background-color: transparent;
     color: #000000;
@@ -71,8 +72,6 @@
 }
 
 .products-cart .btn-two:hover {
-    border: 1.5px solid black;
     background-color: rgba(145, 255, 111, 0.606);
-    color: #000000;
-    text-transform: uppercase;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }

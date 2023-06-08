@@ -3,19 +3,26 @@
 
 
 <div class="product-grid">
-    <div *ngFor="let product of (products$ | async )" class="product-card">
+    <div *ngFor="let product of filteredProducts" class="product-card">
         <img [src]="product.image">
         <div class="title" [innerHTML]="highlightTitle(product.title)"></div>
         <button (click)="addItemsToCart(product)">Add to cart</button>
-
         <h3>Price: {{ product.price | currency }}</h3>
         <p class="description" [title]="product.description">{{ product.description }}</p>
     </div>
+    <div *ngIf="filteredProducts.length === 0 && searchKey !== ''" class="no-match">
+        <img src="https://i.imgur.com/SKiu4F6.jpg" alt="not found">
+        <h1 class="error">No shoes found!</h1>
+    </div>
 </div>
+
 
 <!-- pagination -->
 
 <div class="pagination">
+    <button class="first-last" (click)="storeService.firstPage()" [disabled]="(currentPage$ | async) === 1">
+        First Page
+    </button>
     <button (click)="prevPage()">
         <span class="material-symbols-outlined">
             arrow_back_ios
@@ -24,4 +31,8 @@
     <button (click)="nextPage()"><span class="material-symbols-outlined">
             arrow_forward_ios
         </span></button>
+    <button class="first-last" (click)="storeService.lastPage()"
+        [disabled]="(currentPage$ | async) === (totalPages$ | async)">
+        Last Page
+    </button>
 </div>

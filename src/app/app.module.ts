@@ -13,12 +13,11 @@ import { CheckoutFormComponent } from './components/checkout-form/checkout-form.
 import { NotFoundComponent } from './components/routes/not-found/not-found.component';
 import { HomeComponent } from './components/routes/home/home.component';
 import { CheckoutComponent } from './components/routes/checkout/checkout.component';
-
-// Add these two
 import { LottieModule } from 'ngx-lottie';
-import player from 'lottie-web';
+import { HttpClientModule } from '@angular/common/http';
+import { APP_SETTINGS_TOKEN, appSettings } from './app.settings';
+import { TermsComponent } from './components/routes/terms/terms.component';
 
-// Export this function
 export function playerFactory(): any {
   return import('lottie-web');
 }
@@ -34,16 +33,18 @@ export function playerFactory(): any {
     NotFoundComponent,
     HomeComponent,
     CheckoutComponent,
+    TermsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     RouterModule,
-    ReactiveFormsModule, // Add the module like so:    
+    ReactiveFormsModule,
     LottieModule.forRoot({ player: playerFactory }),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [{ provide: APP_SETTINGS_TOKEN, useValue: appSettings }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

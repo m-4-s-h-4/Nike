@@ -1,0 +1,261 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "title": "json-server",
+            "author": "typicode"
+        }
+    ],
+    "comments": [
+        {
+            "id": 1,
+            "body": "some comment",
+            "postId": 1
+        }
+    ],
+    "profile": {
+        "name": "typicode"
+    },
+    "products": [
+        {
+            "id": 1,
+            "title": "White Nike Men's Air Zoom Pegasus 37 Running Shoes",
+            "price": 109.95,
+            "description": "Experience responsive cushioning and lightweight support during your runs.",
+            "category": "men's shoes",
+            "image": "https://i.imgur.com/AtPLHzx.png",
+            "rating": {
+                "rate": 3.9,
+                "count": 120
+            }
+        },
+        {
+            "id": 2,
+            "title": "Black Nike Men's Air Max 270 React Sneakers",
+            "price": 22.3,
+            "description": "Get exceptional cushioning and bold style with these trendy sneakers.",
+            "category": "men's shoes",
+            "image": "https://www.nike.ae/dw/image/v2/BDVB_PRD/on/demandware.static/-/Sites-akeneo-master-catalog/default/dw5c37d946/nk/48a/c/3/6/8/f/48ac368f_0d69_4b57_ad8d_4ebaa8e2eb74.png?sw=520&sh=520&sm=fit",
+            "rating": {
+                "rate": 4.1,
+                "count": 259
+            }
+        },
+        {
+            "id": 3,
+            "title": "Sports Nike Women's Free RN Flyknit 3.0 Running Shoes",
+            "price": 55.99,
+            "description": "Experience the ultimate lightweight and flexible running shoes.",
+            "category": "women's shoes",
+            "image": "https://i.imgur.com/m0w5WXx.png",
+            "rating": {
+                "rate": 4.7,
+                "count": 500
+            }
+        },
+        {
+            "id": 4,
+            "title": "Sports Nike Men's Air Jordan 1 Mid Basketball Shoes",
+            "price": 15.99,
+            "description": "Channel your inner athlete with these iconic basketball shoes.",
+            "category": "men's shoes",
+            "image": "https://i.imgur.com/OEHYFTb.png",
+            "rating": {
+                "rate": 2.1,
+                "count": 430
+            }
+        },
+        {
+            "id": 5,
+            "title": "Black Nike Men's Air 290  ",
+            "price": 695,
+            "description": "Get exceptional cushioning and bold style with these trendy sneakers.",
+            "category": "men's shoes",
+            "image": "https://www.brooksrunning.com/dw/image/v2/BGPF_PRD/on/demandware.static/-/Sites-brooks-master-catalog/default/dw5d574cea/original/110339/110339-075-m-hyperion-tempo-mens-fast-running-and-training-shoe.png?sw=425&sh=425&sm=fit",
+            "rating": {
+                "rate": 4.6,
+                "count": 400
+            }
+        },
+        {
+            "id": 6,
+            "title": "White Nike Women's Revolution 5 Running Shoes ",
+            "price": 168,
+            "description": "Enjoy lightweight comfort and breathable support for your daily runs.",
+            "category": "women's shoes",
+            "image": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1646394313-zoomx-streakfly-road-racing-shoes-lrCMPz.png?crop=1.00xw:0.534xh;0,0.315xh&resize=980:*",
+            "rating": {
+                "rate": 3.9,
+                "count": 70
+            }
+        },
+        {
+            "id": 7,
+            "title": "Nike Kids' Flex Runner Sneakers",
+            "price": 59,
+            "description": "These lightweight and flexible sneakers are perfect for active kids on the go.",
+            "category": "kids' shoes",
+            "image": "https://i.imgur.com/RgBsxCw.png",
+            "rating": {
+                "rate": 4.5,
+                "count": 120
+            }
+        },
+        {
+            "id": 8,
+            "title": "Nike Kids' Superstar Foundation Shoes",
+            "price": 75,
+            "description": "Classic and stylish, these iconic shoes offer timeless appeal for young trendsetters.",
+            "category": "kids' shoes",
+            "image": "https://i.imgur.com/WRpGgZt.png",
+            "rating": {
+                "rate": 4.7,
+                "count": 90
+            }
+        },
+        {
+            "id": 9,
+            "title": "Nike Kids' Chuck Taylor All Star High-Top Sneakers",
+            "price": 45,
+            "description": "These iconic high-top sneakers from Nike are a timeless choice for kids' everyday style.",
+            "category": "kids' shoes",
+            "image": "https://i.imgur.com/UgbtFCe.png",
+            "rating": {
+                "rate": 4.4,
+                "count": 60
+            }
+        },
+        {
+            "id": 10,
+            "title": "Nike Women's Cali Fashion Sneakers",
+            "price": 85,
+            "description": "Step up your style game with these fashionable sneakers from Nike.",
+            "category": "women's shoes",
+            "image": "https://i.imgur.com/3eRdrcv.png",
+            "rating": {
+                "rate": 4.8,
+                "count": 150
+            }
+        },
+        {
+            "id": 11,
+            "title": "Nike Men's Air Max 90 Running Shoes",
+            "price": 120,
+            "description": "Experience maximum comfort and style with Nike Men's Air Max 90 Running Shoes.",
+            "category": "men's shoes",
+            "image": "https://static.nike.com/a/images/t_default/92511553-5c5c-4da6-96da-96a51dc701ed/air-force-1-07-mid-womens-shoes-2NP34w.png",
+            "rating": {
+                "rate": 4.6,
+                "count": 80
+            }
+        },
+        {
+            "id": 12,
+            "title": "Nike Women's Ultraboost Running Shoes",
+            "price": 180,
+            "description": "Elevate your running experience with Nike Women's Ultraboost Running Shoes.",
+            "category": "women's shoes",
+            "image": "https://i.imgur.com/xGbR9P6.png",
+            "rating": {
+                "rate": 4.9,
+                "count": 200
+            }
+        },
+        {
+            "id": 13,
+            "title": "Nike Chuck Taylor All Star Low-Top Sneakers",
+            "price": 50,
+            "description": "Classic low-top sneakers from Nike that never go out of style.",
+            "category": "unisex shoes",
+            "image": "https://i.imgur.com/bTA5Mg7.png",
+            "rating": {
+                "rate": 4.7,
+                "count": 90
+            }
+        },
+        {
+            "id": 14,
+            "title": "Nike Clyde Court Basketball Shoes",
+            "price": 110,
+            "description": "Get ready to dominate the court with Nike Men's Clyde Court Basketball Shoes.",
+            "category": "unisex shoes",
+            "image": "https://i.imgur.com/LpyJnxb.png",
+            "rating": {
+                "rate": 4.5,
+                "count": 70
+            }
+        },
+        {
+            "id": 15,
+            "title": "Nike Old Skool Skateboarding Shoes",
+            "price": 60,
+            "description": "Embrace the skateboarding culture with Nike Old Skool Skateboarding Shoes.",
+            "category": "unisex shoes",
+            "image": "https://i.imgur.com/jaSAj0h.png",
+            "rating": {
+                "rate": 4.6,
+                "count": 100
+            }
+        },
+        {
+            "id": 16,
+            "title": "Nike Kids' Superstar Sneakers",
+            "price": 50,
+            "description": "These classic Superstar sneakers from Nike are perfect for kids who want to add style to their outfit.",
+            "category": "kids' shoes",
+            "image": "https://i.imgur.com/D1akbBw.png",
+            "rating": {
+                "rate": 4.7,
+                "count": 80
+            }
+        },
+        {
+            "id": 17,
+            "title": "Nike Chuck 70 High-Top Sneakers",
+            "price": 75,
+            "description": "Step out in style with these high-top Chuck 70 sneakers from Nike.",
+            "category": "unisex shoes",
+            "image": "https://i.imgur.com/IdMQNUi.png",
+            "rating": {
+                "rate": 4.5,
+                "count": 120
+            }
+        },
+        {
+            "id": 18,
+            "title": "Nike Men's Air Max 270 Shoes",
+            "price": 150,
+            "description": "Experience exceptional comfort and style with Nike Air Max 270 shoes.",
+            "category": "men's shoes",
+            "image": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1679571918-110390-426-m-hyperion-max-mens-fastest-running-shoe.png?crop=1xw:1xh;center,top&resize=980:*",
+            "rating": {
+                "rate": 4.9,
+                "count": 300
+            }
+        },
+        {
+            "id": 19,
+            "title": "Nike Classic Leather Sneakers",
+            "price": 70,
+            "description": "Step up your footwear game with these classic leather sneakers from Nike.",
+            "category": "unisex shoes",
+            "image": "https://www.pngall.com/wp-content/uploads/13/Nike-Shoes-PNG-File.png",
+            "rating": {
+                "rate": 4.3,
+                "count": 90
+            }
+        },
+        {
+            "id": 20,
+            "title": "Nike Embrace the colour Shoes",
+            "price": 55,
+            "description": "Embrace the skateboarding culture with these iconic Old Skool skate shoes from Nike.",
+            "category": "unisex shoes",
+            "image": "https://i.imgur.com/GNWfKzq.png",
+            "rating": {
+                "rate": 4.7,
+                "count": 150
+            }
+        }
+    ]
+}

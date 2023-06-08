@@ -1,0 +1,261 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "title": "json-server",
+            "author": "typicode"
+        }
+    ],
+    "comments": [
+        {
+            "id": 1,
+            "body": "some comment",
+            "postId": 1
+        }
+    ],
+    "profile": {
+        "name": "typicode"
+    },
+    "products": [
+        {
+            "id": 1,
+            "title": "Chaussures de course Nike Air Zoom Pegasus 37 pour hommes (blanches)",
+            "price": 109.95,
+            "description": "Profitez d'un amorti réactif et d'un soutien léger lors de vos courses.",
+            "category": "chaussures pour hommes",
+            "image": "https://i.imgur.com/AtPLHzx.png",
+            "rating": {
+                "rate": 3.9,
+                "count": 120
+            }
+        },
+        {
+            "id": 2,
+            "title": "Baskets Nike Air Max 270 React pour hommes (noires)",
+            "price": 22.3,
+            "description": "Obtenez un amorti exceptionnel et un style audacieux avec ces baskets tendance.",
+            "category": "chaussures pour hommes",
+            "image": "https://www.nike.ae/dw/image/v2/BDVB_PRD/on/demandware.static/-/Sites-akeneo-master-catalog/default/dw5c37d946/nk/48a/c/3/6/8/f/48ac368f_0d69_4b57_ad8d_4ebaa8e2eb74.png?sw=520&sh=520&sm=fit",
+            "rating": {
+                "rate": 4.1,
+                "count": 259
+            }
+        },
+        {
+            "id": 3,
+            "title": "Chaussures de course Nike Free RN Flyknit 3.0 pour femmes (sport)",
+            "price": 55.99,
+            "description": "Découvrez l'ultime légèreté et la flexibilité des chaussures de course.",
+            "category": "chaussures pour femmes",
+            "image": "https://i.imgur.com/m0w5WXx.png",
+            "rating": {
+                "rate": 4.7,
+                "count": 500
+            }
+        },
+        {
+            "id": 4,
+            "title": "Chaussures de basket Nike Air Jordan 1 Mid pour hommes (sport)",
+            "price": 15.99,
+            "description": "Exprimez votre athlète intérieur avec ces chaussures de basket emblématiques.",
+            "category": "chaussures pour hommes",
+            "image": "https://i.imgur.com/OEHYFTb.png",
+            "rating": {
+                "rate": 2.1,
+                "count": 430
+            }
+        },
+        {
+            "id": 5,
+            "title": "Baskets Nike Air 290 pour hommes (noires)",
+            "price": 695,
+            "description": "Obtenez un amorti exceptionnel et un style audacieux avec ces baskets tendance.",
+            "category": "chaussures pour hommes",
+            "image": "https://www.brooksrunning.com/dw/image/v2/BGPF_PRD/on/demandware.static/-/Sites-brooks-master-catalog/default/dw5d574cea/original/110339/110339-075-m-hyperion-tempo-mens-fast-running-and-training-shoe.png?sw=425&sh=425&sm=fit",
+            "rating": {
+                "rate": 4.6,
+                "count": 400
+            }
+        },
+        {
+            "id": 6,
+            "title": "Chaussures de course Nike Revolution 5 pour femmes (blanches)",
+            "price": 168,
+            "description": "Profitez d'un confort léger et d'un soutien respirant pour vos courses quotidiennes.",
+            "category": "chaussures pour femmes",
+            "image": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1646394313-zoomx-streakfly-road-racing-shoes-lrCMPz.png?crop=1.00xw:0.534xh;0,0.315xh&resize=980:*",
+            "rating": {
+                "rate": 3.9,
+                "count": 70
+            }
+        },
+        {
+            "id": 7,
+            "title": "Baskets Nike Flex Runner pour enfants",
+            "price": 59,
+            "description": "Ces baskets légères et flexibles sont parfaites pour les enfants actifs.",
+            "category": "chaussures pour enfants",
+            "image": "https://i.imgur.com/RgBsxCw.png",
+            "rating": {
+                "rate": 4.5,
+                "count": 120
+            }
+        },
+        {
+            "id": 8,
+            "title": "Chaussures Nike Superstar Foundation pour enfants",
+            "price": 75,
+            "description": "Classiques et élégantes, ces chaussures emblématiques offrent un attrait intemporel pour les jeunes tendanceurs.",
+            "category": "chaussures pour enfants",
+            "image": "https://i.imgur.com/WRpGgZt.png",
+            "rating": {
+                "rate": 4.7,
+                "count": 90
+            }
+        },
+        {
+            "id": 9,
+            "title": "Baskets montantes Nike Chuck Taylor All Star pour enfants",
+            "price": 45,
+            "description": "Ces baskets montantes emblématiques de Nike sont un choix intemporel pour le style quotidien des enfants.",
+            "category": "chaussures pour enfants",
+            "image": "https://i.imgur.com/UgbtFCe.png",
+            "rating": {
+                "rate": 4.4,
+                "count": 60
+            }
+        },
+        {
+            "id": 10,
+            "title": "Baskets de mode Nike Cali pour femmes",
+            "price": 85,
+            "description": "Rehaussez votre style avec ces baskets tendance de Nike.",
+            "category": "chaussures pour femmes",
+            "image": "https://i.imgur.com/3eRdrcv.png",
+            "rating": {
+                "rate": 4.8,
+                "count": 150
+            }
+        },
+        {
+            "id": 11,
+            "title": "Chaussures de course Nike Air Max 90 pour hommes",
+            "price": 120,
+            "description": "Profitez d'un confort et d'un style maximum avec les chaussures de course Nike Air Max 90 pour hommes.",
+            "category": "chaussures pour hommes",
+            "image": "https://static.nike.com/a/images/t_default/92511553-5c5c-4da6-96da-96a51dc701ed/air-force-1-07-mid-womens-shoes-2NP34w.png",
+            "rating": {
+                "rate": 4.6,
+                "count": 80
+            }
+        },
+        {
+            "id": 12,
+            "title": "Chaussures de course Nike Ultraboost pour femmes",
+            "price": 180,
+            "description": "Élevez votre expérience de course avec les chaussures de course Nike Ultraboost pour femmes.",
+            "category": "chaussures pour femmes",
+            "image": "https://i.imgur.com/xGbR9P6.png",
+            "rating": {
+                "rate": 4.9,
+                "count": 200
+            }
+        },
+        {
+            "id": 13,
+            "title": "Baskets basses Nike Chuck Taylor All Star",
+            "price": 50,
+            "description": "Des baskets basses classiques de Nike qui ne se démodent jamais.",
+            "category": "chaussures unisexes",
+            "image": "https://i.imgur.com/bTA5Mg7.png",
+            "rating": {
+                "rate": 4.7,
+                "count": 90
+            }
+        },
+        {
+            "id": 14,
+            "title": "Chaussures de basketball Nike Clyde Court",
+            "price": 110,
+            "description": "Préparez-vous à dominer le terrain avec les chaussures de basketball Nike Clyde Court pour hommes.",
+            "category": "chaussures unisexes",
+            "image": "https://i.imgur.com/LpyJnxb.png",
+            "rating": {
+                "rate": 4.5,
+                "count": 70
+            }
+        },
+        {
+            "id": 15,
+            "title": "Chaussures de skateboard Nike Old Skool",
+            "price": 60,
+            "description": "Adoptez la culture du skateboard avec les chaussures de skateboard Nike Old Skool.",
+            "category": "chaussures unisexes",
+            "image": "https://i.imgur.com/jaSAj0h.png",
+            "rating": {
+                "rate": 4.6,
+                "count": 100
+            }
+        },
+        {
+            "id": 16,
+            "title": "Baskets Nike Superstar pour enfants",
+            "price": 50,
+            "description": "Ces baskets Superstar classiques de Nike sont parfaites pour les enfants qui veulent ajouter du style à leur tenue.",
+            "category": "chaussures pour enfants",
+            "image": "https://i.imgur.com/D1akbBw.png",
+            "rating": {
+                "rate": 4.7,
+                "count": 80
+            }
+        },
+        {
+            "id": 17,
+            "title": "Baskets montantes Nike Chuck 70",
+            "price": 75,
+            "description": "Sortez avec style avec ces baskets montantes Chuck 70 de Nike.",
+            "category": "chaussures unisexes",
+            "image": "https://i.imgur.com/IdMQNUi.png",
+            "rating": {
+                "rate": 4.5,
+                "count": 120
+            }
+        },
+        {
+            "id": 18,
+            "title": "Chaussures de course Nike Air Max 270 pour hommes",
+            "price": 150,
+            "description": "Découvrez un confort et un style exceptionnels avec les chaussures Nike Air Max 270.",
+            "category": "chaussures pour hommes",
+            "image": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1679571918-110390-426-m-hyperion-max-mens-fastest-running-shoe.png?crop=1xw:1xh;center,top&resize=980:*",
+            "rating": {
+                "rate": 4.9,
+                "count": 300
+            }
+        },
+        {
+            "id": 19,
+            "title": "Baskets en cuir classiques Nike",
+            "price": 70,
+            "description": "Rehaussez votre jeu de chaussures avec ces baskets en cuir classiques de Nike.",
+            "category": "chaussures unisexes",
+            "image": "https://www.pngall.com/wp-content/uploads/13/Nike-Shoes-PNG-File.png",
+            "rating": {
+                "rate": 4.3,
+                "count": 90
+            }
+        },
+        {
+            "id": 20,
+            "title": "Chaussures Nike Embrace the colour",
+            "price": 55,
+            "description": "Adoptez la culture du skateboard avec ces iconiques chaussures de skateboard Old Skool de Nike.",
+            "category": "chaussures unisexes",
+            "image": "https://i.imgur.com/GNWfKzq.png",
+            "rating": {
+                "rate": 4.7,
+                "count": 150
+            }
+        }
+    ]
+}
