@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+/* font-family: 'Monoton', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap');
+
+:root {
+    --orange: #ff4800;
+    --hoverorange: #d03b00;
+    --grey: #f2f2f2;
+    --light-background: rgb(255, 244, 230);
+    --light-orange: #e67e22;
+    --border-orange: #f39c12;
+}
 
 * {
     font-family: 'Inter', sans-serif;
-}
-
-.match {
-    font-family: 'Dosis', sans-serif;
-    background-color: #ff9c76;
-    padding: 5px;
-    border-radius: 20px;
 }

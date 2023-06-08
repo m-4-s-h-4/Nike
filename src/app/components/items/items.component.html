@@ -28,6 +28,9 @@
             arrow_back_ios
         </span>
     </button>
+    <div class="page-numbers" *ngFor="let pageNumber of pageNumbers$ | async">
+        <a class="number" (click)="storeService.currentPage$.next(pageNumber)">{{ pageNumber }}</a>
+    </div>
     <button (click)="nextPage()"><span class="material-symbols-outlined">
             arrow_forward_ios
         </span></button>

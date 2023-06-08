@@ -20,7 +20,7 @@ export class NavbarComponent {
   }
 
   itemCategory(): string {
-    return this.storeService.selectedCategory.value;
+    return this.storeService.selectedCategory$.value;
   }
 
   resetCategory() {

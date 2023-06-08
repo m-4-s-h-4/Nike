@@ -1,15 +1,21 @@
-<div class="products-cart">
-    <table>
-        <tbody>
-            <tr *ngFor="let item of cartItems$ | async; let i = index">
-                <td><img [src]="item.image"></td>
-                <td>{{ item.title }}</td>
-                <td>{{ item.price | currency }}</td>
-                <td><button (click)="removeItem(i)">Remove</button></td>
-            </tr>
-        </tbody>
-    </table>
-    <h2>Total: {{ total$ | async | currency }}</h2>
-    <button class="btn-one" *ngIf="checkoutPage" routerLink="/">Continue shopping</button>
-    <button class="btn-two" *ngIf="!checkoutPage" routerLink="/checkout">Go to Checkout</button>
+<div *ngIf="(cartItems$ | async)?.length; else emptyCart">
+    <div class="products-cart">
+        <table>
+            <tbody>
+                <tr *ngFor="let item of cartItems$ | async; let i = index">
+                    <td><img [src]="item.image"></td>
+                    <td>{{ item.title }}</td>
+                    <td>{{ item.price | currency }}</td>
+                    <td><button (click)="removeItem(i)">Remove</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Total: {{ total$ | async | currency }}</h2>
+        <button class="btn-one" *ngIf="checkoutPage" routerLink="/">Continue shopping</button>
+        <button class="btn-two" *ngIf="!checkoutPage" routerLink="/checkout">Go to Checkout</button>
+    </div>
 </div>
+<ng-template #emptyCart>
+    <img src="https://i.imgur.com/RRg86ER.jpg">
+    <h1>No items in the cart</h1>
+</ng-template>

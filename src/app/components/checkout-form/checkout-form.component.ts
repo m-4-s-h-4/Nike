@@ -27,6 +27,7 @@ export class CheckoutFormComponent implements OnInit, OnDestroy {
       terms: [false, Validators.requiredTrue]
     });
 
+
     this.countryChangeSubscription = this.form.get('country')!.valueChanges.subscribe(value => {
       if (value === 'USA') {
         this.form.get('state')!.clearValidators();
@@ -42,10 +43,10 @@ export class CheckoutFormComponent implements OnInit, OnDestroy {
   }
 
   onSubmit(): void {
-    this.sendEmail();
+    this.submitForm();
   }
 
-  sendEmail() {
+  submitForm() {
     this.http.post('http://localhost:3000/orders', {
       subject: 'Order confirmation',
       email: `
@@ -53,7 +54,7 @@ export class CheckoutFormComponent implements OnInit, OnDestroy {
         <img src="https://thumb.ac-illust.com/03/032dcdbe757be7a65e5825910f1898da_t.jpeg">
       `,
     }, { responseType: 'text' }).subscribe((res) => {
-      // navigating here instead of html so that form is not destroyed like when i had it in html
+
       this.router.navigate(['/success']);
     });
   }

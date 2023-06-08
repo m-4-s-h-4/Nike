@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Observable } from 'rxjs';
 import Product from '../../types/product.model';
 import { CartService } from 'src/app/services/cart/cart.service';
@@ -9,11 +9,14 @@ import { FilterPipe } from '../../pipe/filter.pipe';
   selector: 'app-items',
   templateUrl: './items.component.html',
   styleUrls: ['./items.component.css'],
+  encapsulation: ViewEncapsulation.None,
   providers: [FilterPipe]
 })
+
 export class ItemsComponent implements OnInit {
   currentPage$ = this.storeService.currentPage$;
   totalPages$ = this.storeService.totalPages$;
+  pageNumbers$: Observable<number[]> = this.storeService.pageNumbers$;
   products$: Observable<Product[]>;
   products: Product[] = [];
   filteredProducts: Product[] = [];

@@ -56,7 +56,7 @@ h3 {
 .product-card button {
     position: absolute;
     color: #fff;
-    background-color: #ff4800;
+    background-color: var(--orange);
     top: 10%;
     right: 10px;
     transform: translateY(-50%);
@@ -68,7 +68,7 @@ h3 {
 }
 
 .product-card button:hover {
-    background-color: #d03b00;
+    background-color: var(--hoverorange);
 }
 
 /* pagination */
@@ -79,28 +79,51 @@ h3 {
     justify-content: center;
 }
 
+.page-numbers {
+    margin-left: 1rem;
+    width: 2.5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.number {
+    background-color: var(--grey);
+    padding: 5px 11px;
+    border-radius: 50%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
 .pagination button {
-    background-color: #ff4800;
+    background-color: var(--grey);
     border: none;
     border-radius: 50%;
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 10px 12px;
     margin: 0 10px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .pagination .first-last {
-    background-color: #f2f2f2;
+    background-color: var(--grey);
     border-radius: 10px;
-    box-shadow: none;
-    border: 2px solid black;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     color: black;
 }
 
 .pagination .first-last:hover {
-    background-color: #ff4800;
+    background-color: var(--light-background);
 }
 
+/* highlight */
+
+.match {
+    font-family: 'Dosis', sans-serif;
+    background-color: #ff9c76 !important;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+/* no shoe match */
 .error {
     font-size: 5rem;
     font-family: 'Monoton', cursive;

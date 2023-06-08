@@ -16,8 +16,12 @@ import { CheckoutComponent } from './components/routes/checkout/checkout.compone
 import { LottieModule } from 'ngx-lottie';
 import { HttpClientModule } from '@angular/common/http';
 import { APP_SETTINGS_TOKEN, appSettings } from './app.settings';
-import { TermsComponent } from './components/routes/terms/terms.component';
+import { APP_INITIALIZER } from '@angular/core';
+import { StoreService } from './services/store/store.service';
 
+export function initializeApp(storeService: StoreService): () => Promise<any> {
+  return () => storeService.loadProducts();
+}
 export function playerFactory(): any {
   return import('lottie-web');
 }
@@ -33,7 +37,6 @@ export function playerFactory(): any {
     NotFoundComponent,
     HomeComponent,
     CheckoutComponent,
-    TermsComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,18 @@ export function playerFactory(): any {
     LottieModule.forRoot({ player: playerFactory }),
     HttpClientModule
   ],
-  providers: [{ provide: APP_SETTINGS_TOKEN, useValue: appSettings }],
+  providers: [
+    {
+      provide: APP_INITIALIZER,
+      useFactory: initializeApp,
+      deps: [StoreService],
+      multi: true
+    },
+    {
+      provide: APP_SETTINGS_TOKEN,
+      useValue: appSettings
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

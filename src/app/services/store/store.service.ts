@@ -8,27 +8,49 @@ import { APP_SETTINGS_TOKEN, APP_SETTINGS } from '../../app.settings';
   providedIn: 'root'
 })
 export class StoreService {
+  products$ = new BehaviorSubject<Product[]>([]);
   public search = new BehaviorSubject<string>("");
-  public selectedCategory = new BehaviorSubject<string>("");
-  private currentPage = new BehaviorSubject<number>(1);
+  public selectedCategory$ = new BehaviorSubject<string>("");
+
   private pageSize: number;
-  public currentPage$ = this.currentPage.asObservable();
-  private totalPages = new BehaviorSubject<number>(1);
-  public totalPages$ = this.totalPages.asObservable();
+  public totalPages$ = new BehaviorSubject<number>(1);
+  public currentPage$ = new BehaviorSubject<number>(1);
+  public pageNumbers$ = this.totalPages$.pipe(
+    map(totalPages => Array.from({ length: totalPages }, (_, i) => i + 1))
+  );
 
   constructor(private http: HttpClient, @Inject(APP_SETTINGS_TOKEN) private settings: APP_SETTINGS) {
     this.pageSize = settings.pageSize;
   }
 
-  products$ = this.http.get<Product[]>(this.settings.dataSourceURL[this.settings.language]);
+  //1. Getting products
+  loadProducts(): Promise<Product[]> {
+    return new Promise((resolve, reject) => {
+      this.http.get<Product[]>(this.settings.dataSourceURL[this.settings.language]).subscribe({
+        next: (products) => {
+          if (!products) {
+            reject('Products not loaded');
+          }
+          this.products$.next(products);
+          resolve(products);
+        },
+        error: (error) => {
+          this.products$.next([]);
+          reject(error);
+        }
+      });
+    });
+  }
 
+
+  //2. categories
   categories$ = this.products$
     .pipe(
       map(products => products.map(product => product.category)),
       map(categories => [...new Set(categories)])
     );
 
-  filteredProducts$ = combineLatest([this.products$, this.selectedCategory, this.currentPage])
+  filteredProducts$ = combineLatest([this.products$, this.selectedCategory$, this.currentPage$])
     .pipe(
       map(([products, selectedCategory, currentPage]) => {
         let filteredProducts = products;
@@ -38,11 +60,11 @@ export class StoreService {
         const totalItems = filteredProducts.length;
         const totalPages = Math.ceil(totalItems / this.pageSize);
 
-        this.totalPages.next(totalPages);
+        this.totalPages$.next(totalPages);
 
         if (currentPage > totalPages) {
           currentPage = totalPages;
-          this.currentPage.next(currentPage);
+          this.currentPage$.next(currentPage);
         }
 
         const start = (currentPage - 1) * this.pageSize;
@@ -53,25 +75,25 @@ export class StoreService {
     );
 
   changeCategory(category: string) {
-    this.selectedCategory.next(category);
+    this.selectedCategory$.next(category);
   }
 
   nextPage(): void {
-    this.currentPage.next(this.currentPage.value + 1);
+    this.currentPage$.next(this.currentPage$.value + 1);
   }
 
   prevPage(): void {
-    if (this.currentPage.value > 1) {
-      this.currentPage.next(this.currentPage.value - 1);
+    if (this.currentPage$.value > 1) {
+      this.currentPage$.next(this.currentPage$.value - 1);
     }
   }
 
   firstPage(): void {
-    this.currentPage.next(1);
+    this.currentPage$.next(1);
   }
 
   lastPage(): void {
-    this.currentPage.next(this.totalPages.value);
+    this.currentPage$.next(this.totalPages$.value);
   }
 }
 
