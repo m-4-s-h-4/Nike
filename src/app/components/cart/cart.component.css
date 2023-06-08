@@ -15,7 +15,7 @@ h1 {
 }
 
 img {
-    height: 30%;
+    max-height: 20rem;
 }
 
 .products-cart h2 {
