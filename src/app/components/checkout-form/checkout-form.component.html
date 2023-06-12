@@ -21,6 +21,9 @@
         <div *ngIf="form.get('email')?.touched && form.get('email')?.errors?.['required']" class="error-message">
             Field is required
         </div>
+        <div *ngIf="form.get('email')?.touched && form.get('email')?.errors?.['email']" class="error-message">
+            Email is not valid
+        </div>
     </div>
     <div class="input-container">
         <select id="country" formControlName="country" required class="custom-select">

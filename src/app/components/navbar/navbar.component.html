@@ -4,9 +4,12 @@
             class="logo" routerLink="/">
         <div class="items">
             <div class="item" (click)="resetCategory()">all</div>
-            <div class="item" *ngFor="let category of categories$ | async"
-                [class.selected]="itemCategory() === category" (click)="changeCategory(category)">{{category}}</div>
+            <div class="item" *ngFor="let category of numberOfItems$ | async | keyvalue"
+                [class.selected]="itemCategory() === category.key" (click)="changeCategory(category.key)">
+                {{category.key}} ({{category.value}})
+            </div>
         </div>
+
         <div class="input-container">
             <input type="text" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="Just don't do it.    ->">
         </div>

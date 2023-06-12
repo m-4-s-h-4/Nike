@@ -1,8 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Subscription } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { FormService } from 'src/app/services/submitForm/form.service';
 
 @Component({
   selector: 'app-checkout-form',
@@ -13,7 +13,7 @@ export class CheckoutFormComponent implements OnInit, OnDestroy {
   form: FormGroup = this.fb.group({});
   countryChangeSubscription: Subscription = new Subscription();
 
-  constructor(private fb: FormBuilder, private http: HttpClient, private router: Router) { }
+  constructor(private fb: FormBuilder, private formService: FormService, private router: Router) { }
 
   ngOnInit(): void {
     this.form = this.fb.group({
@@ -46,15 +46,16 @@ export class CheckoutFormComponent implements OnInit, OnDestroy {
     this.submitForm();
   }
 
-  submitForm() {
-    this.http.post('http://localhost:3000/orders', {
+  submitForm(): void {
+    const order = {
       subject: 'Order confirmation',
       email: `
         <h1>Your order was placed and will be shipped soon!</h1>
         <img src="https://thumb.ac-illust.com/03/032dcdbe757be7a65e5825910f1898da_t.jpeg">
       `,
-    }, { responseType: 'text' }).subscribe((res) => {
+    };
 
+    this.formService.submitOrder(order).subscribe(() => {
       this.router.navigate(['/success']);
     });
   }

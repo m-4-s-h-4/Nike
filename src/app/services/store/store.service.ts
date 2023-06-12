@@ -12,6 +12,15 @@ export class StoreService {
   public search = new BehaviorSubject<string>("");
   public selectedCategory$ = new BehaviorSubject<string>("");
 
+  public categoryItemCounter$ = this.products$.pipe(
+    map(products =>
+      products.reduce((acc, product) => {
+        acc[product.category] = (acc[product.category] || 0) + 1;
+        return acc;
+      }, {} as { [key: string]: number })
+    )
+  );
+
   private pageSize: number;
   public totalPages$ = new BehaviorSubject<number>(1);
   public currentPage$ = new BehaviorSubject<number>(1);
@@ -23,7 +32,6 @@ export class StoreService {
     this.pageSize = settings.pageSize;
   }
 
-  //1. Getting products
   loadProducts(): Promise<Product[]> {
     return new Promise((resolve, reject) => {
       this.http.get<Product[]>(this.settings.dataSourceURL[this.settings.language]).subscribe({
@@ -42,8 +50,6 @@ export class StoreService {
     });
   }
 
-
-  //2. categories
   categories$ = this.products$
     .pipe(
       map(products => products.map(product => product.category)),

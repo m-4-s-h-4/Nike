@@ -10,9 +10,14 @@ import { Observable } from 'rxjs';
 export class NavbarComponent {
   public searchTerm: string = '';
   public categories$: Observable<string[]>;
+  numberOfItems$: Observable<{ [key: string]: number; }> | undefined;
 
   constructor(private storeService: StoreService) {
     this.categories$ = this.storeService.categories$;
+  }
+
+  ngOnInit(): void {
+    this.numberOfItems$ = this.storeService.categoryItemCounter$;
   }
 
   changeCategory(category: string) {
